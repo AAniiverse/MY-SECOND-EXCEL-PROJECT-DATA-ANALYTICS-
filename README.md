@@ -22,7 +22,6 @@ This project shows complete analysis of the capstone adidas dataset(Given not ex
 9. [Strategic Recommendations](#9-strategic-recommendations)
 10. [Lessons Learnt](#10-lessons-learnt)
 11. [Tools & Skills Used](#11-tools--skills-used)
-12. [Project Structure](#12-project-structure)
 
 
 ---
