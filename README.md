@@ -22,6 +22,7 @@ This project shows complete analysis of the capstone adidas dataset(Given not ex
 9. [Strategic Recommendations](#9-strategic-recommendations)
 10. [Lessons Learnt](#10-lessons-learnt)
 11. [Tools & Skills Used](#11-tools--skills-used)
+12. [About This Project](#12-About-This-Project)
 
 
 ---
@@ -323,7 +324,7 @@ All bar charts in the dashboard use horizontal bars for category comparisons (pr
 | 11 | o	🟢Top retailer | **West Gear — $32M (27% of retail revenue)** |
 | 12 | o	🔴Most underperforming retailer | **Amazon — $10M (8% of retail revenue)** |
 | 13 | o	🟢Revenue peak months | **July and August (summer spike)** |
-| 14 | o	🔴Softest period | **Q4 — October through December** |
+| 14 | o	🔴Softest period | **Q2&Q4 — April-June and October-December** |
 
 ---
 
@@ -419,7 +420,7 @@ The numbers showed that Amazon generated $10M. The data alone does not say wheth
 
 ---
 
-## About This Project
+## 12. About This Project
 
 **Programme:** Data Analytics Learning Journey  
 **Analyst:** Nyong Asuabiat  
