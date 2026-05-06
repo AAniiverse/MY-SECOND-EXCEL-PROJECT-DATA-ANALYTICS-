@@ -5,7 +5,7 @@ This project shows complete analysis of the capstone adidas dataset(Given not ex
 # Adidas Sales Data Analysis — Capstone Project
 
 **Tool:** Microsoft Excel  
-**Dataset Source:** Provided by instructor   
+**Dataset Source:** External Learning Source   
 **Raw Format:** Excel Workbook (.xlsx)  
 **Analysis Type:** Full 360° Sales Performance Audit  
 
@@ -28,11 +28,11 @@ This project shows complete analysis of the capstone adidas dataset(Given not ex
 
 ## 1. Project Overview
 
-This project is the capstone submission for the. It involves a full end-to-end analysis of Adidas sales data — from raw dataset ingestion through cleaning, structured analysis, dashboard development, and final strategic interpretation.
+This project showcases a full end-to-end analysis of Adidas sales data — from raw dataset ingestion through cleaning, structured analysis, dashboard development, and final strategic interpretation. 
 
-The core objective was to deliver a business-ready performance audit that any Adidas stakeholder could act on. The analysis covers four dimensions simultaneously: **products**, **sales channels**, **geographic regions**, and **retail partners** — with every insight grounded directly in the data.
+The core objective was to deliver a business-ready performance audit that any Adidas stakeholder could act on. The analysis covers four dimensions simultaneously: **products**, **sales channels**, **geographic regions**, and **retail partners** — with every insights grounded directly in the data.
 
-The final output is a set of interactive Excel dashboards 
+The final output is a set of Excel dashboards showing key details at a glance for necessary insights and decisions.
 
 ---
 
@@ -49,6 +49,11 @@ Before touching the data, the following questions were defined to frame the enti
 | 5 | What is the monthly sales trend, and when is the peak demand period? |
 | 6 | What are the key risks to the current revenue structure? |
 | 7 | What concrete actions should Adidas leadership prioritise? |
+
+6.	Are there specific products that show strong growth potential or declining demand?
+7.	How do Adidas sales compare to projected targets or benchmarks in different markets?
+8.	What are the top-performing product lines across regions?
+
 
 Defining these questions first prevented scope creep and kept every cleaning step, pivot table, and chart directly tied to a decision-making need.
 
@@ -76,18 +81,12 @@ The dataset was provided as a single Excel workbook (.xlsx). It contained transa
 | Operating Margin | Profit margin percentage |
 | Sales Method | Sales channel: Online, Outlet, or In-Store |
 
-**Scale of the data:**
-- Full year of transactions
-- 6 product categories
-- 5 U.S. regions
-- 6 retail partners
-- 3 sales channels
 
 ---
 
 ## 4. Data Collection
 
-The dataset was received directly from the . No web scraping, API calls, or external data merging was required at this stage.
+The dataset was received directly from an external source as a downloadable file. No web scraping, API calls, or external data merging was required at this stage.
 
 Upon first opening the file, two immediate preliminary checks were performed before any formal cleaning began:
 
@@ -120,11 +119,16 @@ The same 10× inflation was present in the `Operating Profit` column. This was a
 
 ### 5.2 Product Name Standardisation
 
-The `Product` column contained full descriptive product names that were long and inconsistent in how they were referenced across the sheet. To make analysis cleaner and pivot tables more readable:
+The `Product` column contained full descriptive product names that were long and consuming much space which was not good especially for dashboarding. To make analysis cleaner and pivot tables more readable, I...:
 
-- Created a **new helper column** to hold shortened product codes/initials
+- Created a **new helper column** to hold shortened product names using the product name Initials.
 - Built a **product bucket list** (a lookup reference table) on the Product Analysis sheet mapping each full product name to its standardised short form
-- Used `XLOOKUP` to populate the new column by returning the correct short form for each row based on the full product name
+
+  <img width="429" height="147" alt="Screenshot 2026-05-06 180142" src="https://github.com/user-attachments/assets/db55f3d2-2f9d-4278-919e-525dd481badb" />
+  
+<p></p>
+
+- Used `XLOOKUP` to populate the new column by returning the correct short form for each row based on the full product name. (VLOOKUP() does same work but XLOOKUP() has been more flexible and high level since its launch, perhaps, it's facing out V- and H-lookup())
 
 This created a consistent, reusable reference that made all downstream pivot tables and charts display clean, uniform category labels.
 
@@ -193,6 +197,10 @@ With a clean, verified dataset, analysis was conducted using **Excel PivotTables
 
 **Finding:** Online generated the highest revenue ($44.97M) and the highest profit contribution (41%) — making it the most efficient channel. In-Store had the lowest profit contribution (27%) relative to its revenue share (29.7%), indicating high fixed cost drag.
 
+<img width="1302" height="156" alt="Screenshot 2026-05-06 180911" src="https://github.com/user-attachments/assets/3d3589b6-ff31-4fa2-a4a0-a16273bd1e91" />
+
+<p></p>
+
 ### 6.3 Regional Analysis
 
 **Approach:** Pivot table grouping `Total Sales` by `Region`.
@@ -202,6 +210,10 @@ With a clean, verified dataset, analysis was conducted using **Excel PivotTables
 - Gap analysis between the highest and lowest performing regions
 
 **Finding:** West led at $36.4M. Midwest trailed at $16.7M — a $19.7M gap that represents either a market penetration failure or an untapped opportunity depending on the growth strategy applied.
+
+<img width="423" height="293" alt="Screenshot 2026-05-06 181227" src="https://github.com/user-attachments/assets/720a4d3f-659a-449f-a342-7f9625fcf29b" />
+
+<p></p>
 
 ### 6.4 Retailer Analysis
 
@@ -213,6 +225,10 @@ With a clean, verified dataset, analysis was conducted using **Excel PivotTables
 - Identification of concentration risk (single-partner dependency)
 
 **Finding:** West Gear contributed 27% of total retail revenue ($32M). Amazon contributed only 8% ($10M) — a critical underperformance for the world's largest e-commerce marketplace.
+
+<img width="400" height="273" alt="Screenshot 2026-05-06 181450" src="https://github.com/user-attachments/assets/49b052d3-e8bd-4fc1-a1ae-664c647123c3" />
+
+<p></p>
 
 ### 6.5 Monthly Trend Analysis
 
@@ -319,19 +335,22 @@ Five recommendation pillars were developed directly from the analysis findings:
 - **Invest behind Men's Street Footwear** — it is the volume and margin leader across all regions. Expand colourways, exclusive partnerships, and dedicated marketing.
 - **Restructure Men's Apparel** — reposition with a fresh campaign or rationalise the SKU count. Continued underperformance will cede market share to competitors.
 - **Grow Women's Athletic Footwear** — strong trajectory with room to close the gap on Men's. Growing category with demonstrable untapped demand.
+- **Overall** — Product categories are stable, not extreme, which is good, meanwhile, lean into the top three products driving revenue - Men’s Street Footwear, Women’s Apparel, and Men’s Athletic Footwear. Reposition weaker categories.
 
 ### Pillar 2 — Channel Optimisation
 - **Redirect 10–15% of In-Store budget to Online** — Online delivers 41% profit at lower operational cost. Reducing In-Store fixed cost directly improves overall margin.
 - **Fix the Amazon channel** — $10M from the world's largest marketplace is a structural failure. Invest immediately in advertising, listing quality, and placement.
-- **Use Outlet strategically in Q4** — the softest revenue period (Oct-Dec) is the right window for planned clearance through Outlet to protect margin while moving aged inventory.
+- **Use Outlet strategically in Q2&Q4** — the softest revenue period (Apr-Jun & Oct-Dec) is the right window for planned clearance through Outlet to protect margin while moving aged inventory.
+- **Improve** — In-store experience and Omnichannel integration (click & collect) - Use in-stores as brand experience hubs, not just sales points.
 
 ### Pillar 3 — Regional Focus
 - **Study and replicate the West region playbook** — $36.4M did not happen by accident. Extract its retailer mix, product focus, and channel split, then apply those levers to underperforming markets.
 - **Run a dedicated Midwest campaign** — at $16.7M it is the weakest market. Increased Sports Direct and Foot Locker presence are the most immediate levers.
 - **Accelerate Northeast investment** — $25.1M with clear headroom. Online investment and additional West Gear-style partnerships can move this market materially.
+- **Investigate** — Instore and Outlet activities specifically in the south and southeast region respectively. There is a massive concern as they contribute only about 1.65% and 9.69% to a total revenue of over $20M and $21M respectively in both region.
 
 ### Pillar 4 — Demand Forecasting
-- **Build summer inventory by April** — the July-August spike is consistent and predictable. Stockouts during peak summer are a direct revenue loss. Procurement must start no later than April.
+- **Build summer inventory by April** — the July-August spike is consistent and predictable. Stockouts during peak summer are a direct revenue loss. Procurement must start no later than April. Replicate same thing for December-January low peak period starting from September-October
 - **Counter Q4 decline proactively** — launch Online-targeted promotions in October-December to counteract the post-summer revenue drop. Use the highest-efficiency channel to smooth the curve.
 - **Sustain Men's Footwear safety stock year-round** — this category moves units in every month and every region. Consistent availability is a competitive advantage, and non-negotiable.
 
@@ -392,10 +411,10 @@ The numbers showed that Amazon generated $10M. The data alone does not say wheth
 
 | Category | Detail |
 |---|---|
-| **Primary Tool** | Microsoft Excel |
+| **Primary Tool** | Microsoft Excel 2021 |
 | **Data Cleaning** | Manual formula auditing, `UNIQUE()`, `XLOOKUP()`, `YEAR()`, `MONTH()`, `DAY()`, etc. |
 | **Analysis** | PivotTables, PivotCharts, calculated fields |
-| **Visualisation** | Excel dashboard sheets, bar charts, KPI cards |
+| **Visualisation** | Excel dashboard sheets, bar charts, KPI cards, colours, fonts, etc. |
 | **Core Skills** | Data cleaning, exploratory data analysis, business interpretation, dashboard design(Graphics & Creative design), strategic communication, analytical & critical thinking |
 
 ---
@@ -403,11 +422,12 @@ The numbers showed that Amazon generated $10M. The data alone does not say wheth
 ## About This Project
 
 **Programme:** Data Analytics Learning Journey  
-**Analyst:** [Nyong Asuabiat]  
+**Analyst:** Nyong Asuabiat  
 **Period:** April.May 2026  
 **Dataset:** Adidas U.S. Sales — Full Year  
-**Contact:** [linkedin.com/in/aanyy]
+**Contact:** [LinkedIn](https://linkedin.com/in/aanyy)
 
 ---
 
-*This project was completed as part of the BeTechified Data Analytics Programme. All analysis, interpretations, and recommendations are the work of the analyst and are based solely on the dataset provided.*
+
+*This project was completed as part of SelfLearning Journey in Data Analytics. Dataset was gotten from an external learning source. All analysis, interpretations, and recommendations are the work of the analyst and are based solely on the dataset provided.*
