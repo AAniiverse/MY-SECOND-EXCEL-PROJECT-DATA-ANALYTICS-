@@ -1,5 +1,5 @@
 # MY-SECOND-EXCEL-PROJECT-DATA-ANALYTICS-
-This project shows complete analysis of the capstone adidas dataset(Given not extracted).
+This project shows complete analysis of the capstone adidas dataset.
 
 
 # Adidas Sales Data Analysis — Capstone Project
@@ -50,10 +50,6 @@ Before touching the data, the following questions were defined to frame the enti
 | 5 | What is the monthly sales trend, and when is the peak demand period? |
 | 6 | What are the key risks to the current revenue structure? |
 | 7 | What concrete actions should Adidas leadership prioritise? |
-
-6.	Are there specific products that show strong growth potential or declining demand?
-7.	How do Adidas sales compare to projected targets or benchmarks in different markets?
-8.	What are the top-performing product lines across regions?
 
 
 Defining these questions first prevented scope creep and kept every cleaning step, pivot table, and chart directly tied to a decision-making need.
