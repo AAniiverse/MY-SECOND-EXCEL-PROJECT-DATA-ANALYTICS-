@@ -1,13 +1,13 @@
 # MY-SECOND-EXCEL-PROJECT-DATA-ANALYTICS-
-This project shows complete analysis of the capstone adidas dataset.
+This project shows complete analysis of the adidas sales dataset.
 
 
-# Adidas Sales Data Analysis — Capstone Project
+# Adidas Sales Data Analysis
 
-**Tool:** Microsoft Excel  
+**Tool:** Microsoft Excel 2021  
 **Dataset Source:** External Learning Source   
 **Raw Format:** Excel Workbook (.xlsx)  
-**Analysis Type:** Full 360° Sales Performance Audit  
+**Analysis Type:** Complete Sales Performance Audit  
 
 ## Table of Contents
 
@@ -330,7 +330,7 @@ Five recommendation pillars were developed directly from the analysis findings:
 
 ### Pillar 1 — Product Strategy
 - **Invest behind Men's Street Footwear** — it is the volume and margin leader across all regions. Expand colourways, exclusive partnerships, and dedicated marketing.
-- **Restructure Men's Apparel** — reposition with a fresh campaign or rationalise the SKU count. Continued underperformance will cede market share to competitors.
+- **Restructure Men's Apparel** — reposition with a fresh campaign or rationalise the SKU count. Continued underperformance will give up market share to competitors.
 - **Grow Women's Athletic Footwear** — strong trajectory with room to close the gap on Men's. Growing category with demonstrable untapped demand.
 - **Overall** — Product categories are stable, not extreme, which is good, meanwhile, lean into the top three products driving revenue - Men’s Street Footwear, Women’s Apparel, and Men’s Athletic Footwear. Reposition weaker categories.
 
