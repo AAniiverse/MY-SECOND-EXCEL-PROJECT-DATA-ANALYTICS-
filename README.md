@@ -257,7 +257,9 @@ Three separate dashboard sheets were built:
 ### **Sales or General Overview** 
 High-level KPIs: total revenue, total profit, margin %, total units sold, Revenue by Product, Retailer, Region and Channel, etc
 
-<img width="1598" height="844" alt="Screenshot 2026-05-06 111230" src="https://github.com/user-attachments/assets/fa00583f-18c6-4a11-81a5-9288c672ba05" />
+<img width="1599" height="845" alt="Screenshot 2026-05-09 012006" src="https://github.com/user-attachments/assets/e73353ee-34c9-418a-a655-d49cca7347af" />
+
+
 
 <p></p>
 
@@ -265,14 +267,16 @@ High-level KPIs: total revenue, total profit, margin %, total units sold, Revenu
 ### **Product Analysis** 
 Product revenue comparison, breakdown by channel, units by product, product trend, etc.
 
-<img width="1603" height="841" alt="Screenshot 2026-05-06 111253" src="https://github.com/user-attachments/assets/0052a30e-3e43-4d71-8842-4dc7d634d5ad" />
+<img width="1600" height="839" alt="Screenshot 2026-05-09 012037" src="https://github.com/user-attachments/assets/c3667e06-40b6-465f-ac12-e44641ad68e2" />
+
 
 <p></p>
 
 ### **Channel Dashboard** 
 Channel revenue map; Channel performance comparison and strength in each region, product, retailer; Channel Trend, etc. 
 
-<img width="1599" height="841" alt="Screenshot 2026-05-06 111317" src="https://github.com/user-attachments/assets/f2225b2b-a5fd-4704-a0df-c6ad92e5a30d" />
+<img width="1597" height="842" alt="Screenshot 2026-05-09 012054" src="https://github.com/user-attachments/assets/fab00f89-8baa-4b5b-8201-e7c9a1a00888" />
+
 
 
 ### 7.3 Colour Choices and Visual Language
